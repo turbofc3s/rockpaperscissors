@@ -3,10 +3,10 @@
 variable to store number of wins for computer
 variable to store number of wins for user
 */
-const playerText = document.getElementById('playerText')
-const computerText = document.getElementById('computerText')
-const resultText = document.getElementById('resultText')
-const choicebtns = document.querySelectorAll('.choicebtn')
+const playerText = document.getElementById("playerText")
+const computerText = document.getElementById("computerText")
+const resultText = document.getElementById("resultText")
+const choicebtns = document.querySelectorAll(".choicebtn")
 
 let player;
 let computer;
@@ -20,7 +20,6 @@ choicebtns.forEach(button => button.addEventListener('click', () => {
 	computerText.textContent = `Computer: ${computer}`;
 	resultText.textContent = checkWinner();
 }));
-
 
 function computerTurn() {
 
@@ -37,11 +36,11 @@ function computerTurn() {
 		 computer = "SCISSORS";
 		 break;
 	}
-
-}
+} 
 function checkWinner() {
 	if (player == computer) {
 		return "Draw!";
+
 	}
 	else if (computer == "ROCK") {
 		return (player == "PAPER") ? "You win!" : "You lose!"
@@ -52,6 +51,4 @@ function checkWinner() {
 	else if (computer == "SCISSORS") {
 		return (player =="ROCK") ? "You win!" : "You lose!"
 	}		 		
-}
-
-
+};
